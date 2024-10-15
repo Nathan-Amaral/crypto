@@ -18,26 +18,26 @@
 
         <br>
 
-        def chiffre_par_decalage(n, chaine):
-        message_chiffre = []
+        def chiffre_par_decalage(n, chaine):<br>
+        message_chiffre = []<br>
 
-        for char in chaine:
-        if 'A' <= char <= 'Z':
-        nouveau_char = chr((ord(char) - ord('A') + n) % 26 + ord('A'))
-        message_chiffre.append(nouveau_char)
-        else:
-        message_chiffre.append(char)
+        for char in chaine:<br>
+        if 'A' <= char <= 'Z':<br>
+        nouveau_char = chr((ord(char) - ord('A') + n) % 26 + ord('A'))<br>
+        message_chiffre.append(nouveau_char)<br>
+        else:<br>
+        message_chiffre.append(char)<br>
 
-        return ''.join(message_chiffre)
+        return ''.join(message_chiffre)<br>
 
-        resultat = chiffre_par_decalage(4, "ABC")
-        print(resultat)
+        resultat = chiffre_par_decalage(4, "ABC")<br>
+        print(resultat)<br>
 
-        MessageCrypte="JC QAPGNR NMSP BCAMBCP LC BCTPYGR NYQ CRPC JMLE Y DYGPC HC JC BMLLCPYG QSP AC KCKC DMPSK"
-        lg=len(MessageCrypte)
-        MessageClair= ""
+        MessageCrypte="JC QAPGNR NMSP BCAMBCP LC BCTPYGR NYQ CRPC JMLE Y DYGPC HC JC BMLLCPYG QSP AC KCKC DMPSK"<br>
+        lg=len(MessageCrypte)<br>
+        MessageClair= ""<br>
 
-        frequenceLettre = {
+        frequenceLettre = {<br>
         'E': 0.121,
         'A': 0.071,
         'I': 0.065,
@@ -49,13 +49,13 @@
         'L': 0.049,
         'U': 0.049
         }
-
-        for i in range (lg):
-        if  MessageCrypte[i]=='':
-        MessageClair+=''
-        else:
-        asc=ord(MessageCrypte[i])-4
-        MessageClair+=chr(asc+26*((asc<65)-(asc>90)))
+        <br>
+        for i in range (lg):<br>
+        if  MessageCrypte[i]=='':<br>
+        MessageClair+=''<br>
+        else:<br>
+        asc=ord(MessageCrypte[i])-4<br>
+        MessageClair+=chr(asc+26*((asc<65)-(asc>90)))<br>
         print (MessageClair)
     </div>
     <h1 class="text-center p-5">TD2</h1>
